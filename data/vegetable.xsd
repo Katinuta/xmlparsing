@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/salad"
+        xmlns:tns="http://www.example.com/salad"
+        elementFormDefault="qualified">
+
+    <element name="vegetable" abstract="true" type="tns:vegetable"/>
+    <element name="fruit-vegetable" type="tns:fruit-vegetable" substitutionGroup="tns:vegetable"/>
+    <element name="rootcrop" type="tns:rootcrop" substitutionGroup="tns:vegetable"/>
+    <element name="leafy-vegetable" type="tns:leafy-vegetable" substitutionGroup="tns:vegetable"/>
+
+    <element name="salad">
+        <complexType>
+            <sequence>
+                <element ref="tns:vegetable" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="fruit-vegetable">
+        <complexContent>
+            <extension base="tns:vegetable">
+                <sequence>
+                    <element name="using-seeks" type="boolean" default="false"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="rootcrop">
+        <complexContent>
+            <extension base="tns:vegetable">
+                <sequence>
+                    <element name="deleting-cork" type="boolean" default="false"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="leafy-vegetable">
+        <complexContent>
+            <extension base="tns:vegetable">
+                <sequence>
+                    <element name="using-stalk" type="boolean" default="false"/>
+                    <element name="using-leaf" type="boolean" default="false"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="vegetable">
+        <sequence>
+
+            <element name="caloricity">
+                <simpleType>
+                    <restriction base="positiveInteger">
+                        <minInclusive value="10"/>
+                        <maxInclusive value="150"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="weight">
+                <simpleType>
+                    <restriction base="positiveInteger">
+                        <minInclusive value="1"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="composition" type="tns:composition"/>
+
+            <element name="cutting-style" type="tns:cutting-style-type"/>
+
+        </sequence>
+        <attribute name="way-cooking" use="optional" default="raw" type="tns:way-cooking-type"/>
+        <attribute name="vegetable-id" type="tns:id-vegetable" use="required"/>
+
+        <attribute name="vegetable-name" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <pattern value="\w{3,30}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+
+    </complexType>
+    <simpleType name="id-vegetable">
+        <restriction base="ID">
+            <pattern value="c[0-9]{1,10}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="composition">
+        <sequence>
+
+            <element name="protein">
+                <simpleType>
+                    <restriction base="decimal">
+                        <minInclusive value="0.1"/>
+                        <maxInclusive value="10"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="carbohydrate">
+                <simpleType>
+                    <restriction base="decimal">
+                        <minInclusive value="0.1"/>
+                        <maxInclusive value="70"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="fat">
+                <simpleType>
+                    <restriction base="decimal">
+                        <minInclusive value="0"/>
+                        <maxInclusive value="3"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+        </sequence>
+    </complexType>
+    <simpleType name="way-cooking-type">
+        <restriction base="string">
+            <enumeration value="raw"/>
+            <enumeration value="fry"/>
+            <enumeration value="boil"/>
+            <enumeration value="stew"/>
+            <enumeration value="steam"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="cutting-style-type">
+        <restriction base="string">
+            <enumeration value="finedice"/>
+            <enumeration value="shreading"/>
+            <enumeration value="matchsticks"/>
+            <enumeration value="largedice"/>
+            <enumeration value="slicing"/>
+            <enumeration value="rollcutting"/>
+        </restriction>
+    </simpleType>
+</schema>

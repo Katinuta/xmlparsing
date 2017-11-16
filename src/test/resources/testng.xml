@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testAll">
+    <test name="test">
+        <classes>
+            <class name="test.by.teplouhova.chef.builder.VegetablesSAXBuilderTest"/>
+            <class name="test.by.teplouhova.chef.builder.VegetablesDOMBuilderTest"/>
+            <class name="test.by.teplouhova.chef.builder.VegetablesSTAXBuilderTest"/>
+            <class name="test.by.teplouhova.chef.builder.VegetablesUnMarshallerBuilderTest"/>
+            <class name="test.by.teplouhova.chef.factory.VegetablesBuilderFactoryTest"/>
+        </classes>
+    </test>
+</suite>

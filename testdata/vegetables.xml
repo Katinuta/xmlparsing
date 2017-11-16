@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<salad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.example.com/salad"
+       xsi:schemaLocation="http://www.example.com/salad ">
+
+    <fruit-vegetable vegetable-id="c2" vegetable-name="tomato" way-cooking="stew">
+        <caloricity>30</caloricity>
+        <weight>300</weight>
+        <composition>
+            <protein>0.2</protein>
+            <carbohydrate>11.1</carbohydrate>
+            <fat>0.0</fat>
+        </composition>
+        <cutting-style>matchsticks</cutting-style>
+        <using-seeks>true</using-seeks>
+    </fruit-vegetable>
+
+    <leafy-vegetable vegetable-id="c3" vegetable-name="cabbage">
+        <caloricity>16</caloricity>
+        <weight>1000</weight>
+        <composition>
+            <protein>1.2</protein>
+            <carbohydrate>2.2</carbohydrate>
+            <fat>0.2</fat>
+        </composition>
+        <cutting-style>shreading</cutting-style>
+        <using-stalk>true</using-stalk>
+        <using-leaf>true</using-leaf>
+    </leafy-vegetable>
+
+</salad>

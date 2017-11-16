@@ -1,0 +1,18 @@
+16:43:17.588 [main] FATAL by.teplouhova.chef.sax.VegetableErrorHandler - Fatal Error:URI=file:///C:/Users/SMIT_Creator/IdeaProjects/xmlparsing/data/testfile.txt1:Premature end of file.
+16:45:13.476 [main] FATAL by.teplouhova.chef.sax.VegetableErrorHandler - Fatal Error:URI=file:///C:/Users/SMIT_Creator/IdeaProjects/xmlparsing/data/testfile.xml1:Premature end of file.
+16:46:59.698 [main] FATAL by.teplouhova.chef.sax.VegetableErrorHandler - Fatal Error:URI=file:///C:/Users/SMIT_Creator/IdeaProjects/xmlparsing/data/testfile.xml1:Premature end of file.
+21:05:26.598 [main] ERROR teplouhova.chef.builder.impl.VegetablesUnMarshBuilder - JAXB - context is incorrectjavax.xml.bind.JAXBException: Provider com.sun.xml.internal.bind.v2.ContextFactory could not be instantiated: javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index
+ - with linked exception:
+[javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index]
+21:08:57.606 [main] ERROR teplouhova.chef.builder.impl.VegetablesUnMarshBuilder - JAXB - context is incorrectjavax.xml.bind.JAXBException: Provider com.sun.xml.internal.bind.v2.ContextFactory could not be instantiated: javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index
+ - with linked exception:
+[javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index]
+21:09:40.288 [main] ERROR teplouhova.chef.builder.impl.VegetablesUnMarshBuilder - JAXB - context is incorrectjavax.xml.bind.JAXBException: Provider com.sun.xml.internal.bind.v2.ContextFactory could not be instantiated: javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index
+ - with linked exception:
+[javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index]
+21:09:59.930 [main] ERROR teplouhova.chef.builder.impl.VegetablesUnMarshBuilder - JAXB - context is incorrectjavax.xml.bind.JAXBException: Provider com.sun.xml.internal.bind.v2.ContextFactory could not be instantiated: javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index
+ - with linked exception:
+[javax.xml.bind.JAXBException: "by.teplouhova.chef" doesnt contain ObjectFactory.class or jaxb.index]
+22:42:44.872 [main] ERROR teplouhova.chef.builder.impl.VegetablesUnMarshBuilder - JAXB  unmarshaller error javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/SMIT_Creator/IdeaProjects/xmlparsing/data/vegetables.xml; lineNumber: 95; columnNumber: 75; cvc-pattern-valid: Value 'bulgarian_pepper' is not facet-valid with respect to pattern '\w{3,30}' for type '#AnonType_vegetable-namevegetable'.]
